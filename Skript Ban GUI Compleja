@@ -79,5 +79,5 @@ command /{@comando} [<offline player>]:
 			format slot 10 of player with Enchanted Book named "&bAutoClicker&f/&bMacros &r(Admitido)" with lore "&f&l* &73 &fDias" to close then run [make player execute command "{@sancion7}"]
 			format slot 11 of player with Enchanted Book named "&bAutoClicker&f/&bMacros" with lore "&f&l* &77 &fDias" to close then run [make player execute command "{@sancion8}"]
 			format slot 15 of player with Enchanted Book named "&eSpam" with lore "&f&l* &fMute &71 &fHora" to close then run [make player execute command "{@sancion10}"]
-			format slot 16 of player with Enchanted Book named "Insultos" with lore "&f&l* &71 &fDia" to close then run [make player execute command "{@sancion10}"]
+			format slot 16 of player with Enchanted Book named "&fInsultos" with lore "&f&l* &71 &fDia" to close then run [make player execute command "{@sancion10}"]
 			stop
