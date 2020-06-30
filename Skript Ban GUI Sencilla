@@ -1,0 +1,44 @@
+# Skript Sancion GUI creado por el server MineRay.eu, y editada por Braz
+
+options:
+
+	permiso: sancionar.gui
+	msg.permiso: Alto Ahi Vaquero&c&l!
+	
+	comando: sancionar
+
+	razon1: &4Hacked&f-&4Client
+	razon2:	&fBug abuse
+	razon3: &eSpam
+	razon4: &7Insultos
+	razon5: &bAuto&7-&bClick
+	razon6: &3X&f-&3Ray
+	razon7: &fMods &4ilegales
+	
+	sancion1: /tempban %arg-1% 14d Hacked Client
+	sancion2: /tempban %arg-1% 5d Bug Abuse
+	sancion3: /mute %arg-1% 1h Spam
+	sancion4: /tempban %arg-1% 1d Insultos
+	sancion5: /tempban %arg-1% 5d Auto-Click
+	sancion6: /tempban %arg-1% 8d Mods ilegales
+	sancion7: /tempban %arg-1% 10d X-Ray
+
+
+command /{@comando} [<offline player>]:
+	permission: {@permiso}
+	permission message: {@msg.permiso}
+	trigger:
+		if arg-1 is not set:
+			send "&c/{@comando} <player>" to player
+			stop
+		if arg-1 is set:
+			open chest with 1 row named "&4Sancionar &fa &7%arg-1%" to player
+			wait 3 ticks
+			format slot 0 of player with Wool named "&b{@razon1}" to close then run [make player execute command "{@sancion1}"]
+			format slot 1 of player with Orange Wool named "&b{@razon2}" to close then run [make player execute command "{@sancion2}"]
+			format slot 2 of player with Magenta Wool named "&b{@razon3}" to close then run [make player execute command "{@sancion3}"]
+			format slot 3 of player with Light Blue Wool named "&b{@razon4}" to close then run [make player execute command "{@sancion4}"]
+			format slot 4 of player with Black Wool named "&b{@razon5}" to close then run [make player execute command "{@sancion5}"]
+			format slot 5 of player with Pink Wool named "&b{@razon6}" to close then run [make player execute command "{@sancion6}"]
+			format slot 6 of player with Purple Wool named "&b{@razon7}" to close then run [make player execute command "{@sancion7}"]
+			stop
