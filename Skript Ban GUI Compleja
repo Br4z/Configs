@@ -5,7 +5,7 @@ options:
 	permiso: baneos.gui
 	permission message:ALTO AHI VAQUERO &c&l!
 	
-	comando: ban
+	comando: sancionar
 	
 	sancion0: /tempban %arg-1% 14d Hacked Client 
 	sancion1: /tempban %arg-1% 7d Hacked Client (Admitido)
@@ -34,15 +34,15 @@ command /{@comando} [<offline player>]:
 		if arg-1 is set:
 			open chest with 6 row named "&cSancionar &fA &7%arg-1%" to player
 			wait 1 ticks
-			format slot 0 of player with 351:10 named "&aUnban" to close then run [make player execute command "{@sancion12}"]
+			format slot 0 of player with Light Green Dye named "&aUnban" to close then run [make player execute command "{@sancion12}"]
 			format slot 1 of player with black Stained Glass Pane named "&7" to be unstealable
 			format slot 2 of player with black Stained Glass Pane named "&7" to be unstealable
 			format slot 3 of player with black Stained Glass Pane named "&7" to be unstealable
-			format slot 4 of player with 351:8 named "&eHistorial" to close then run [make player execute command "{@sancion13}"]
+			format slot 4 of player with Gray Dye named "&eHistorial" to close then run [make player execute command "{@sancion13}"]
 			format slot 5 of player with black Stained Glass Pane named "&7" to be unstealable
 			format slot 6 of player with black Stained Glass Pane named "&7" to be unstealable
 			format slot 7 of player with black Stained Glass Pane named "&7" to be unstealable
-			format slot 8 of player with 351:1 named "&cAdvertencia" to close then run [make player execute command "{@sancion14}"]
+			format slot 8 of player with Rose Red named "&cAdvertencia" to close then run [make player execute command "{@sancion14}"]
 			format slot 9 of player with black Stained Glass Pane named "&7" to be unstealable
 			format slot 18 of player with black Stained Glass Pane named "&7" to be unstealable
 			format slot 27 of player with black Stained Glass Pane named "&7" to be unstealable
@@ -72,12 +72,12 @@ command /{@comando} [<offline player>]:
 			format slot 51 of player with black Stained Glass Pane named "&7" to be unstealable
 			format slot 52 of player with black Stained Glass Pane named "&7" to be unstealable
 			format slot 53 of player with black Stained Glass Pane named "&7" to be unstealable
-			format slot 13 of player with 403 named "&4Hacked&f-&4Client &r(Admitido)" with lore "&f&l* &77 &fDias" to close then run [make player execute command "{@sancion1}"]
-			format slot 22 of player with 403 named "&4Hacked&f-&4Client" with lore "&f&l* &714 &fDias" to close then run [make player execute command "{@sancion0}"]
-			format slot 31 of player with 403 named "&fEvadir &cSS" with lore "&f&l* &714 &fDias" to close then run [make player execute command "{@sancion9}"]
-			format slot 40 of player with 403 named "&3X&f-&3Ray" with lore "&f&l* &79 &fDias" to close then run [make player execute command "{@sancion4}"]
-			format slot 10 of player with 403 named "&bAutoClicker&f/&bMacros &r(Admitido)" with lore "&f&l* &73 &fDias" to close then run [make player execute command "{@sancion7}"]
-			format slot 11 of player with 403 named "&bAutoClicker&f/&bMacros" with lore "&f&l* &77 &fDias" to close then run [make player execute command "{@sancion8}"]
-			format slot 15 of player with 403 named "&eSpam" with lore "&f&l* &fMute &71 &fHora" to close then run [make player execute command "{@sancion10}"]
-			format slot 16 of player with 403 named "Insultos" with lore "&f&l* &71 &fDia" to close then run [make player execute command "{@sancion10}"]
+			format slot 13 of player with Enchanted Book named "&4Hacked&f-&4Client &r(Admitido)" with lore "&f&l* &77 &fDias" to close then run [make player execute command "{@sancion1}"]
+			format slot 22 of player with Enchanted Book named "&4Hacked&f-&4Client" with lore "&f&l* &714 &fDias" to close then run [make player execute command "{@sancion0}"]
+			format slot 31 of player with Enchanted Book named "&fEvadir &cSS" with lore "&f&l* &714 &fDias" to close then run [make player execute command "{@sancion9}"]
+			format slot 40 of player with Enchanted Book named "&3X&f-&3Ray" with lore "&f&l* &79 &fDias" to close then run [make player execute command "{@sancion4}"]
+			format slot 10 of player with Enchanted Book named "&bAutoClicker&f/&bMacros &r(Admitido)" with lore "&f&l* &73 &fDias" to close then run [make player execute command "{@sancion7}"]
+			format slot 11 of player with Enchanted Book named "&bAutoClicker&f/&bMacros" with lore "&f&l* &77 &fDias" to close then run [make player execute command "{@sancion8}"]
+			format slot 15 of player with Enchanted Book named "&eSpam" with lore "&f&l* &fMute &71 &fHora" to close then run [make player execute command "{@sancion10}"]
+			format slot 16 of player with Enchanted Book named "Insultos" with lore "&f&l* &71 &fDia" to close then run [make player execute command "{@sancion10}"]
 			stop
