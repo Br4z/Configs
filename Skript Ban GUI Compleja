@@ -72,12 +72,12 @@ command /{@comando} [<offline player>]:
 			format slot 51 of player with black Stained Glass Pane named "&7" to be unstealable
 			format slot 52 of player with black Stained Glass Pane named "&7" to be unstealable
 			format slot 53 of player with black Stained Glass Pane named "&7" to be unstealable
-			format slot 13 of player with Book named "&4Hacked&f-&4Client &r(Admitido)" with lore "&f&l* &77 &fDias" to close then run [make player execute command "{@sancion1}"]
-			format slot 22 of player with Book named "&4Hacked&f-&4Client" with lore "&f&l* &714 &fDias" to close then run [make player execute command "{@sancion0}"]
-			format slot 31 of player with Book named "Evadir &cSS" with lore "&f&l* &714 &fDias" to close then run [make player execute command "{@sancion9}"]
-			format slot 40 of player with Book named "&3X&f-&3Ray" with lore "&f&l* &79 &fDias" to close then run [make player execute command "{@sancion4}"]
-			format slot 10 of player with Book named "&bAutoClicker&f/&bMacros &r(Admitido)" with lore "&f&l* &73 &fDias" to close then run [make player execute command "{@sancion7}"]
-			format slot 11 of player with Book named "&bAutoClicker&f/&bMacros" with lore "&f&l* &77 &fDias" to close then run [make player execute command "{@sancion8}"]
-			format slot 15 of player with Book named "&eSpam" with lore "&f&l* Mute &71 &fHora" to close then run [make player execute command "{@sancion10}"]
-			format slot 16 of player with Book named "Insultos" with lore "&f&l* &71 &fDia" to close then run [make player execute command "{@sancion10}"]
+			format slot 13 of player with 403 named "&4Hacked&f-&4Client &r(Admitido)" with lore "&f&l* &77 &fDias" to close then run [make player execute command "{@sancion1}"]
+			format slot 22 of player with 403 named "&4Hacked&f-&4Client" with lore "&f&l* &714 &fDias" to close then run [make player execute command "{@sancion0}"]
+			format slot 31 of player with 403 named "&fEvadir &cSS" with lore "&f&l* &714 &fDias" to close then run [make player execute command "{@sancion9}"]
+			format slot 40 of player with 403 named "&3X&f-&3Ray" with lore "&f&l* &79 &fDias" to close then run [make player execute command "{@sancion4}"]
+			format slot 10 of player with 403 named "&bAutoClicker&f/&bMacros &r(Admitido)" with lore "&f&l* &73 &fDias" to close then run [make player execute command "{@sancion7}"]
+			format slot 11 of player with 403 named "&bAutoClicker&f/&bMacros" with lore "&f&l* &77 &fDias" to close then run [make player execute command "{@sancion8}"]
+			format slot 15 of player with 403 named "&eSpam" with lore "&f&l* &fMute &71 &fHora" to close then run [make player execute command "{@sancion10}"]
+			format slot 16 of player with 403 named "Insultos" with lore "&f&l* &71 &fDia" to close then run [make player execute command "{@sancion10}"]
 			stop
