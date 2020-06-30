@@ -20,7 +20,7 @@ options:
 	sancion10: /mute %arg-1% 1h Spam
 	sancion11: /tempban %arg-1% 1d Insultos
 	sancion12: /unban %arg-1%
-	sancion13: /history %arg-1%
+	sancion13: /warn get %arg-1%
 	sancion14: /warn %arg-1% Comportate,de lo contario tomaremos medidas
 
 
