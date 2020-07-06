@@ -1,0 +1,55 @@
+request:
+  sent: '&l(&7&l!&r&l) &rHas enviado una peticion de tradeo a &7%PLAYER%'
+  received:
+    text: '&l(&7&l!&r&l) &rHas recibido una peticion de tradeo de &7%PLAYER%%NEWLINE%&l(&7&l!&r&l)
+      &rEscribe &7/trade %PLAYER% &rpara empezar a tradear'
+    hover: Click aqui para tradear con &7%PLAYER%
+errors:
+  creative: '&l(&7&l!&r&l) &rNo puedes tradear en modo creativo &c&l!'
+  creative-them: '&l(&7&l!&r&l) &rEste jugador esta en creativo &c&l!'
+  within-range:
+    same-world: '&l(&7&l!&r&l) &rDebes estar a %AMOUNT% bloques para tradear con el'
+    cross-world: '&l(&7&l!&r&l) &rDebes estar a %AMOUNT% bloques para tradear con
+      el%NEWLINE%&l(&7&l!&r&l) &rEn un mundo diferente para tradear con el'
+  no-cross-world: '&l(&7&l!&r&l) &rDebes estar en el mismo mundo que el jugador para
+    tradear con el'
+  wait-for-expire: '&l(&7&l!&r&l) &rTodavia tienes una peticion de tradeo activa %NEWLINE%&l(&7&l!&r&l)
+    &rLa peticion expirara pronto'
+  player-not-found: '&l(&7&l!&r&l) &rNo se ha encontrado al jugador,posiblemente este
+    desconectado'
+  self-trade: '&l(&7&l!&r&l) &rNo puedes tradear contigo mismo'
+  invalid-usage: '&l(&7&l!&r&l) &rComando erroneo.Usa: %NEWLINE%    &7- /trade <player
+    name>%NEWLINE%    &7- /trade deny'
+  no-perms:
+    accept: '&l(&7&l!&r&l) &rNo tienes permisos para aceptar un treadeo'
+    send: '&l(&7&l!&r&l) &rNo tienes permisos para enviar una peticion de tradeo'
+    receive: '&l(&7&l!&r&l) &rEste jugador no tiene permisos para aceptar un tradeo'
+    admin: '&l(&7&l!&r&l) &rNo tienes permisos para usar este comando'
+accept:
+  sender: '&l(&7&l!&r&l) &7%PLAYER% &rha aceptado tu peticion de tradeo'
+  receiver: '&l(&7&l!&r&l) &rHas aceptado la peticion de &7%PLAYER%'
+cancelled: '&l(&7&l!&r&l) &rEl tradeo fue cancelado'
+expired: '&l(&7&l!&r&l) &rLa peticion de tradeo ha expirado'
+trade-complete: '&l(&7&l!&r&l) &rEl tradeo ha acabado exitosamente &c&l!'
+forced-trade: '&l(&7&l!&r&l) &rHas sido forzado a tradear con &7%PLAYER% &c&l!'
+denied:
+  them: '&l(&7&l!&r&l) &rLa peticion enviada a &7%PLAYER% &rha sido rechazada'
+  you: '&l(&7&l!&r&l) &rCualquier peticion reciente ha sido rechazada'
+spectate:
+  message: '&l(&7&l!&r&l) &e%PLAYER1% &6and &e%PLAYER2% &6have started a trade %NEWLINE%&l(&7&l!&r&l)
+    &6Type &e/tradeplus spectate %PLAYER1% %PLAYER2% &6to spectate'
+  hover: Click aqui para espectear el tradeo
+antiscam:
+  discrepancy: '&l(&7&l!&r&l) &rSe ha detectado una discrepancia en los items.%NEWLINE%&l(&7&l!&r&l)
+    &rEl tradeo ha sido cancelado'
+admin:
+  configs-reloaded: '&l(&7&l!&r&l) &rConfiguracion Actualizada &c&l!'
+  invalid-players: '&l(&7&l!&r&l) &rJugador invalido &c&l!'
+  forced-trade: '&l(&7&l!&r&l) &rHas forzado un tradeo entre &7%PLAYER1% &ry &7%PLAYER2%'
+  players-only: '&l(&7&l!&r&l) &rEste comando es solo para jugadores'
+  no-trade: '&l(&7&l!&r&l) &rNo se ha encontrado un tradeo con esas especificaciones.'
+hooks:
+  factions:
+    enemy-territory: '&l(&7&l!&r&l) &rNo puedes tradear en territorio enemigo &c&l!'
+  worldguard:
+    trading-not-allowed: '&l(&7&l!&r&l) &rNo puedes tradear en esta area &c&l!'
