@@ -61,13 +61,14 @@ command /{@comando} [<offline player>]:
 			format slot 24 of player with Green Stained Glass Pane named "&7" to be unstealable
 			format slot 25 of player with Green Stained Glass Pane named "&7" to be unstealable
 			format slot 26 of player with Green Stained Glass Pane named "&7" to be unstealable
-		message "&fReporte enviado &ecorrectamente&r."	to player
+		set {reportado.%offlineplayer-arg%} to true
+		set {reportadopor.%offlineplayer-arg%} to player
+		send "&fReporte enviado &ecorrectamente&r."
 		loop all players:
 			if loop-player has permission "reportes.admin":
 				send "" to loop-player
 				send "&8&m&l----------------[ &4&lReporte &8&m&l]----------------" to loop-player
-				send "&7Reportado: &c%offlineplayer-arg%&7." to loop-player
-				send "&7Por: &c%player%&7." to loop-player
-				send "&7Motivo: &c%arg-1%" to loop-player
+				send "&fReportado: &7%offlineplayer-arg%&7." to loop-player
+				send "&fPor: &7%player%&7." to loop-player
 				send "&8&m&l----------------[ &4&lReporte &8&m&l]----------------" to loop-player
 				send "" to loop-player
