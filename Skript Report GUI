@@ -29,7 +29,7 @@ command /{@comando} [<offline player>]:
 	permission message: {@msg.permiso}
 	trigger:
 		if arg-1 is not set:
-			send "&c/{@comando} <player>" to player
+			send "&f/{@comando} &7<Jugador>" to player
 			stop
 		if arg-1 is set:
 			open chest with 3 row named "&4Reportar &fa &7%arg-1%" to player
@@ -61,7 +61,6 @@ command /{@comando} [<offline player>]:
 			format slot 24 of player with Green Stained Glass Pane named "&7" to be unstealable
 			format slot 25 of player with Green Stained Glass Pane named "&7" to be unstealable
 			format slot 26 of player with Green Stained Glass Pane named "&7" to be unstealable
-			stop
 		message "&fReporte enviado &ecorrectamente&r."	to player
 		loop all players:
 			if loop-player has permission "reportes.admin":
@@ -72,4 +71,3 @@ command /{@comando} [<offline player>]:
 				send "&7Motivo: &c%arg-1%" to loop-player
 				send "&8&m&l----------------[ &4&lReporte &8&m&l]----------------" to loop-player
 				send "" to loop-player
-				play "LEVEL UP" to loop-player at volume 1.0
