@@ -29,7 +29,7 @@ command /{@comando} [<offline player>]:
 	permission message: {@permission message}
 	trigger:
 		if arg-1 is not set:
-			send "&c/{@comando} <player>" to player
+			send "&f/{@comando} &7<Jugador>" to player
 			stop
 		if arg-1 is set:
 			open chest with 6 row named "&cSancionar &fA &7%arg-1%" to player
