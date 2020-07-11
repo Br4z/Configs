@@ -11,11 +11,10 @@ command /s [<text>]:
 		loop all players:
 			if loop-player has permission "staff.chat":
 				send "&d&l[S] &f%colored player's prefix%%player%&7: &d%arg%" to loop-player
-				play "CLICK" to loop-player at volume 1.0
 command /report [<offlineplayer>] [<text>]:
 	trigger:
 		if arg 2 is not set:
-			send "&fUtilice: &7/report <jugador> <motivo>&7."
+			send "&fUtiliza: &7/report <jugador> <motivo>&7."
 			stop
 		if {delayreport.%player%} is set:
 			send "&fDebes esperar  &7%{delayreport.%player%}% &fsegundos para enviar otro reporte."
@@ -43,7 +42,6 @@ command /report [<offlineplayer>] [<text>]:
 				send "&fMotivo: &7%arg 2%" to loop-player
 				send "&f&m&l----------------[ &4&lReporte &8&m&l]----------------" to loop-player
 				send "" to loop-player
-				play "LEVEL UP" to loop-player at volume 1.0
 		set {delayreport.%player%} to 60
 		wait 1 second
 		loop 59 times:
