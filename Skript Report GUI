@@ -1,0 +1,75 @@
+# Skript Sancion GUI creado por el server MineRay.eu, y editada por Braz
+
+options:
+
+	permiso: reportes.gui
+	msg.permiso: Alto Ahi Vaquero&c&l!
+	
+	comando: reportar
+
+	razon1: &bFly
+	razon2:	&fAbuso de bug
+	razon3: &eSpam
+	razon4: &7Insultos
+	razon5: &bAuto&7-&bClick
+	razon6: &3X&f-&3Ray
+	razon7: &4Hacked&f-&7Client
+	
+	sancion1: /report %arg-1% Fly
+	sancion2: /report %arg-1% Abuso De Bug
+	sancion3: /report %arg-1% Spam
+	sancion4: /report %arg-1% Insultos
+	sancion5: /report %arg-1% Auto-Click
+	sancion6: /report %arg-1% X-Ray
+	sancion7: /report %arg-1% Hacked-Client
+
+
+command /{@comando} [<offline player>]:
+	permission: {@permiso}
+	permission message: {@msg.permiso}
+	trigger:
+		if arg-1 is not set:
+			send "&c/{@comando} <player>" to player
+			stop
+		if arg-1 is set:
+			open chest with 3 row named "&4Reportar &fa &7%arg-1%" to player
+			wait 3 ticks
+			format slot 0 of player with Green Stained Glass Pane named "&7" to be unstealable
+			format slot 1 of player with Green Stained Glass Pane named "&7" to be unstealable
+			format slot 2 of player with Green Stained Glass Pane named "&7" to be unstealable
+			format slot 3 of player with Green Stained Glass Pane named "&7" to be unstealable
+			format slot 4 of player with Green Stained Glass Pane named "&7" to be unstealable
+			format slot 5 of player with Green Stained Glass Pane named "&7" to be unstealable
+			format slot 6 of player with Green Stained Glass Pane named "&7" to be unstealable
+			format slot 7 of player with Green Stained Glass Pane named "&7" to be unstealable
+			format slot 8 of player with Green Stained Glass Pane named "&7" to be unstealable
+			format slot 9 of player with Green Stained Glass Pane named "&7" to be unstealable
+			format slot 10 of player with Feather named "&b{@razon1}" to close then run [make player execute command "{@sancion1}"]
+			format slot 11 of player with Glass named "&b{@razon2}" to close then run [make player execute command "{@sancion2}"]
+			format slot 12 of player with Redstone Torch ON named "&b{@razon3}" to close then run [make player execute command "{@sancion3}"]
+			format slot 13 of player with Torch  named "&b{@razon4}" to close then run [make player execute command "{@sancion4}"]
+			format slot 14 of player with Blaze Rod named "&b{@razon5}" to close then run [make player execute command "{@sancion5}"]
+			format slot 15 of player with Blaze Powder named "&b{@razon6}" to close then run [make player execute command "{@sancion6}"]
+			format slot 16 of player with Diamond Sword named "&b{@razon7}" to close then run [make player execute command "{@sancion7}"]
+			format slot 17 of player with Green Stained Glass Pane named "&7" to be unstealable
+			format slot 18 of player with Green Stained Glass Pane named "&7" to be unstealable
+			format slot 19 of player with Green Stained Glass Pane named "&7" to be unstealable
+			format slot 20 of player with Green Stained Glass Pane named "&7" to be unstealable
+			format slot 21 of player with Green Stained Glass Pane named "&7" to be unstealable
+			format slot 22 of player with Green Stained Glass Pane named "&7" to be unstealable
+			format slot 23 of player with Green Stained Glass Pane named "&7" to be unstealable
+			format slot 24 of player with Green Stained Glass Pane named "&7" to be unstealable
+			format slot 25 of player with Green Stained Glass Pane named "&7" to be unstealable
+			format slot 26 of player with Green Stained Glass Pane named "&7" to be unstealable
+			stop
+		message "&fReporte enviado &ecorrectamente&r."	to player
+		loop all players:
+			if loop-player has permission "reportes.admin":
+				send "" to loop-player
+				send "&8&m&l----------------[ &4&lReporte &8&m&l]----------------" to loop-player
+				send "&7Reportado: &c%offlineplayer-arg%&7." to loop-player
+				send "&7Por: &c%player%&7." to loop-player
+				send "&7Motivo: &c%arg-1%" to loop-player
+				send "&8&m&l----------------[ &4&lReporte &8&m&l]----------------" to loop-player
+				send "" to loop-player
+				play "LEVEL UP" to loop-player at volume 1.0
