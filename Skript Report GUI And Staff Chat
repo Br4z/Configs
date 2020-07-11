@@ -14,7 +14,7 @@ command /s [<text>]:
 command /report [<offlineplayer>] [<text>]:
 	trigger:
 		if arg 2 is not set:
-			send "&fUtiliza: &7/report <jugador> <motivo>&7."
+			send "&fUtilice: &7/report <jugador> <motivo>&7."
 			stop
 		if {delayreport.%player%} is set:
 			send "&fDebes esperar  &7%{delayreport.%player%}% &fsegundos para enviar otro reporte."
@@ -40,8 +40,8 @@ command /report [<offlineplayer>] [<text>]:
 				send "&fReportado: &7%offlineplayer-arg%&7." to loop-player
 				send "&fPor: &7%player%&7." to loop-player
 				send "&fMotivo: &7%arg 2%" to loop-player
-				send "&f&m&l----------------[ &4&lReporte &8&m&l]----------------" to loop-player
-				send "" to loop-player
+				send "&8&m&l----------------[ &4&lReporte &8&m&l]----------------" to loop-player
+				send "" to loop-player			
 		set {delayreport.%player%} to 60
 		wait 1 second
 		loop 59 times:
@@ -87,5 +87,4 @@ every 15 minutes:
 	if amount of {reportes::*} > 0:
 		loop all players:
 			if loop-player has permission "reportes.admin":
-				send "&2&lREPORTES &2- &aHá &f%amount of {reportes::*}% &areportes esperando! Use &f/reportes &aou &f/reportes clear&a." to loop-player
-				play "CLICK" to loop-player at volume 1.0
+				send "&6&lMaxwell&f&lReports &7-> &fHay &7%amount of {reportes::*}% &freportes esperando , usa &7/reportes &fo &7/reportes clear&f." to loop-player
