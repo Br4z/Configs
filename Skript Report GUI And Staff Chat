@@ -1,0 +1,93 @@
+# Skript Traducido Por BRAZ
+
+command /s [<text>]:
+	aliases: /sc
+	permission: staff.chat
+	permission message: &cSem permissão.
+	trigger:
+		if arg is not set:
+			send "&fUtilice: &7/s <mensagem>."
+			stop
+		loop all players:
+			if loop-player has permission "staff.chat":
+				send "&d&l[S] &f%colored player's prefix%%player%&7: &d%arg%" to loop-player
+				play "CLICK" to loop-player at volume 1.0
+command /report [<offlineplayer>] [<text>]:
+	trigger:
+		if arg 2 is not set:
+			send "&fUtilice: &7/report <jugador> <motivo>&7."
+			stop
+		if {delayreport.%player%} is set:
+			send "&fDebes esperar  &7%{delayreport.%player%}% &fsegundos para enviar otro reporte."
+			stop
+		if offlineplayer-arg is "%player%":
+			send "&fNo puedes reportarte a ti mismo &c&l!"
+			stop
+		if {reportado.%offlineplayer-arg%} is true:
+			send "&fEste jugador ya ha sido reportado por otro."
+			stop
+		if amount of {reportes::*} >= 28:
+			send "&fLimite de reportes alcanzado, aguarde."
+			stop
+		set {reportado.%offlineplayer-arg%} to true
+		set {reportadopor.%offlineplayer-arg%} to player
+		set {reportmotivo.%offlineplayer-arg%} to arg 2
+		add offlineplayer-arg to {reportes::*}
+		send "&fReporte enviado &eexitosamente&f."
+		loop all players:
+			if loop-player has permission "reportes.admin":
+				send "" to loop-player
+				send "&8&m&l----------------[ &4&lReporte &8&m&l]----------------" to loop-player
+				send "&fReportado: &7%offlineplayer-arg%&7." to loop-player
+				send "&fPor: &7%player%&7." to loop-player
+				send "&fMotivo: &7%arg 2%" to loop-player
+				send "&f&m&l----------------[ &4&lReporte &8&m&l]----------------" to loop-player
+				send "" to loop-player
+				play "LEVEL UP" to loop-player at volume 1.0
+		set {delayreport.%player%} to 60
+		wait 1 second
+		loop 59 times:
+			remove 1 from {delayreport.%player%}
+			wait 1 second
+		delete {delayreport.%player%}
+		stop
+command /reportes [<text>]:
+	permission: reportes.admin
+	permission message: &fNo tienes permisos &c&l!
+	trigger:
+		if arg is not set:
+			if amount of {reportes::*} < 1:
+				send "&fNingun reporte encontrado."
+				stop
+			set {_slot} to 10
+			set {_numero} to 1
+			open chest with 6 rows named "&7Reportes" to player
+			loop {reportes::*}:
+				format slot {_slot} of player with loop-value's skull named "&c##%{_numero}%" with lore "&fReportado: &7%loop-value%||&fPor: &7%{reportadopor.%loop-value%}%||&fMotivo: &7%{reportmotivo.%loop-value%}%" to be unstealable
+				add 1 to {_numero}
+				if {_slot} is 16 or 25 or 34:
+					add 3 to {_slot}
+				else:
+					add 1 to {_slot}
+			delete {_slot}
+			delete {_numero}
+			stop
+		if text-arg is "clear":
+			if amount of {reportes::*} < 1:
+				send "&fNingun reporte encontrado."
+				stop
+			send "&fHas limpiado &7%amount of {reportes::*}% &freportes."
+			loop {reportes::*}:
+				delete {reportado.%loop-value%}
+				delete {reportadopor.%loop-value%}
+				delete {reportmotivo.%loop-value%}
+			clear {reportes::*}
+			stop
+		make player execute "/reportes"
+		stop
+every 15 minutes:
+	if amount of {reportes::*} > 0:
+		loop all players:
+			if loop-player has permission "reportes.admin":
+				send "&2&lREPORTES &2- &aHá &f%amount of {reportes::*}% &areportes esperando! Use &f/reportes &aou &f/reportes clear&a." to loop-player
+				play "CLICK" to loop-player at volume 1.0
