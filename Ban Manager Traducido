@@ -1,0 +1,396 @@
+# Variables
+# [reason] = Ban/Mute reason
+# [player] = The name of the player
+# [ip] = The banned ip
+# [actor] = Who banned/muted
+# [expires] = How long until the ban/mute ends
+
+messages:
+  duplicateIP: '&3ADVERTENCIA [player] &7Tiene la misma ip que \n&7[players].'
+  configReloaded: Configuracion recargada correctamente &c&l!.
+  deniedNotify:
+    player: '&3ADVERTENCIA [player] &fha intentado acceder al servidor pero se la
+      ha denegado por &7[reason].'
+    ip: '&3ADVERTENCIA [ip] &fha intentado acceder al servidor pero se la ha denegado
+      por &7[reason].'
+  deniedMaxIp: '&6» &fActualmente hay muchos jugadores conectados con tu ip.'
+  deniedMultiaccounts: '&fRecientemente muchos jugadores se han logeado con tu ip.'
+  deniedCountry: '&fProblablemente no te has conectado desde tu region.'
+  time:
+    now: now
+    year: year
+    years: years
+    month: month
+    months: months
+    week: week
+    weeks: weeks
+    day: day
+    days: days
+    hour: hour
+    hours: hours
+    minute: minute
+    minutes: minutes
+    second: second
+    seconds: seconds
+    never: never
+    error:
+      invalid: '&cYour time length is invalid'
+      limit: '&cYou cannot perform this action for that length of time'
+  none: none
+  sender:
+    error:
+      notFound: '&fEl jugador &7[player] &fno se ha encontrado,estas seguro de que
+        extiste?.'
+      offline: '&7[player] &7esta desconectado.'
+      noSelf: No puede aplicar esta accion en ti mismo.
+      exception: '&fHa ocurriodo un error al ejectutar este comando ,verifica en la
+        consola para mas detalles.'
+      invalidIp: IP invalida.
+      offlinePermission: No tienes los permisos para ejecutar este comando en un jugador desconectado.
+      exempt: '&7[player] &fevade este comando.'
+      noPermission: No tienes permisos para ejecutar este comando.
+      invalidReason: '&7[reason] &fes una razon invalida.'
+  alts:
+    header: '&6» &fPosibles Alts Encontradas:'
+  export:
+    error:
+      inProgress: '&cAn export is already in progress, please wait'
+    player:
+      started: '&aPlayer ban export started'
+      finished: '&aPlayer ban export finished, file [file] created'
+    ip:
+      started: '&aIP ban export started'
+      finished: '&aIP ban export finished, file [file] created'
+  import:
+    error:
+      inProgress: '&cAn import is already in progress, please wait'
+    player:
+      started: '&aPlayer ban import started'
+      finished: '&aPlayer ban import finished'
+    ip:
+      started: '&aIP ban import started'
+      finished: '&aIP ban import finished'
+    advancedban:
+      started: '&aAdvancedBan import started'
+      finished: '&aAdvancedBan import finished'
+    h2:
+      started: '&aH2 import started'
+      finished: '&aH2 import finished, please restart the server'
+  info:
+    error:
+      incorrectFlagUsage: '&cA flag has been incorrectly used'
+      invalidIndex: '&cInvalid player option used'
+      indexRequired: '&cMultiple players named [name], found, please select a player
+        by providing an index between 1 and [size], e.g. /bminfo [name] 1'
+      index: '&7#[index] - &6[name] - &4[uuid]'
+    stats:
+      player: '&6» &7[player] &fHa sido baneado &7[bans] &fveces, &fMuteado &7[mutes]
+        &fveces, &fKickeado &7[kicks] &fy ha sido advertido &7[warns] &fveces &7([warnPoints]
+        Points) &fy tiene &7[notes] &fnotas.'
+      ip: Esta ip ha sido baneada &7[bans] &fveces.
+    connection: '&6» &fSu ultima conexion fue con &7[ip] &fel &7[lastSeen]'
+    geoip: '&6» &7Pais &7[country] &7Ciudad &7[city]&f.'
+    ban:
+      permanent: '&6» &fActualmente esta baneado por &7[reason] &fBY &7[actor] &fel
+        &7[created]&f.'
+      temporary: '&6» &fActualmente esta baneado por &7[reason] &fBY &7[actor] &fel
+        &7[created]&f,Expira en &7[expires]&f.'
+      dateTimeFormat: dd-MM-yyyy HH:mm:ss
+    ipban:
+      permanent: '&6» &fActualmente esta baneado de ip por &7[reason] &fBY &7[actor]
+        &fel &7[created]&f.'
+      temporary: '&6» &fActualmente esta baneado de ip por &7[reason] &fBY &7[actor]
+        &fel &7[created]&f,expira en &7[expires]&f.'
+      dateTimeFormat: dd-MM-yyyy HH:mm:ss
+    mute:
+      permanent: '&6» &fActualmente esta muteado por &7[reason] &fBY &7[actor] &fel
+        &7[created]&f.'
+      temporary: '&6» &fActualmente esta muteado por &7[reason] &fBY &7[actor] &fel
+        &7[created]&f,expira en &7[expires]&f.'
+      dateTimeFormat: dd-MM-yyyy HH:mm:ss
+    website:
+      player: http://yourdomain.com/index.php?action=viewplayer&player=[player]&server=0
+      ip: http://yourdomain.com/index.php?action=viewip&ip=[ip]&server=0
+    history:
+      row: '&7#[id] &a[&f[type]&a] &6[actor]&f [meta] [reason] - &e[created]'
+      dateTimeFormat: dd-MM-yyyy HH:mm:ss
+      noResults: '&cNo results found'
+    ips:
+      row: '&e[ip] - &6[join] - [leave]'
+      dateTimeFormat: dd-MM-yyyy HH:mm:ss
+  kick:
+    player:
+      noReason: '&fHas sido kickeado.'
+      reason: '&fHas sido kickeado por &7[reason]&f.'
+    notify:
+      noReason: '&fEl jugador &7[player] &fha sido kickeado por &7[actor]&f.'
+      reason: '&fEl jugador &7[player] &fha sido kickeado por &7[actor] &fRazon: &7[reason]&f.'
+  ban:
+    player:
+      disallowed: '&fHas sido baneado del servidor por &7[reason]&f.'
+      kick: '&fHas sido baneado permanentemente del servidor por &7[reason]&f.'
+    notify: '&fEl jugador &7[player] &fHa sido baneado por &7[actor] &fRazon: &7[reason]&f.'
+    error:
+      exists: '&fEl jugador &7[player] &6» &fActualmente esta baneado.'
+      cooldown: '&fEste jugador ha sido baneado recientemente,intente mas tarde.'
+  banall:
+    notify: '&fEl jugador &7[player] &fHa sido permanente baneado por &7[actor] &fRazon
+      &7[reason]&f.'
+  tempban:
+    player:
+      disallowed: '&fHas sido baneado temporalmente del servidor por &7[reason]&f.
+        \n&fExpira en &7[expires]&f.'
+      kick: '&fHas sido baneado temporalmente del servidor por &7[reason]&f.'
+    notify: '&fEl jugador &7[player] &fha sido temporalmente baneado por &7[actor]
+      &fRazon: &7[reason]&f.'
+  tempbanall:
+    notify: '&fEl jugador &7[player] &fha sido temporalmente baneado durante &7[expires]
+      &fpor &7[actor] &fRazon &7[reason]&f.'
+  unban:
+    notify: '&fEl jugador &7[player] &fha sido perdonado por &7[actor]&f.'
+    error:
+      noExists: '&fEl jugador &7[player] &fno esta baneado.'
+      notOwn: '&fEl jugador &7[player] &fno ha sido baneado por ti,imposible perdonar.'
+  unbanall:
+    notify: '&fEl jugador &7[player] &fha sido perdonado por &7[actor]&f.'
+  mute:
+    player:
+      blocked: '&fTal vez no puedas usar el comando &7[command]&f esta en whilst.'
+      disallowed: '&fHas sido muteado permanentemente por &7[reason] &fBY &7[actor]&f.'
+      broadcast: '&3MUTEADO &r [message]'
+    notify: '&fEl jugador &7[player] &fHa sido muteado permanentemente por &7[actor]
+      &fRazon: &7[reason]&f.'
+    error:
+      exists: '&7El jugador &7[player] &6» &fActualmente esta muteado.'
+      cooldown: '&fEste jugador ha sido muteado recientemente,intente mas tarde.'
+  muteip:
+    ip:
+      disallowed: '&fHas sido muteado por &7[reason] &fBY &7[actor]&f.'
+      broadcast: '&3MUTEADO &r [message]'
+    notify: '&7[ip] ([players]) &fHa sido muteado por &7[actor] &fRazon: &7[reason]&f.'
+    error:
+      exists: '&fEsta ip &7[ip] &6» &fActualmente esta muteada.'
+  muteall:
+    notify: '&fEl jugador &7[player] &fHa sido muteado permanentemente por &7[actor]
+      &fRazon: &7[reason]&f.'
+  tempmute:
+    player:
+      disallowed: '&fHas sido temporalmente muteado por &7[reason] &fBY &7[actor]&f,expira
+        en &7[expires]&f.'
+    notify: '&fEl jugador &7[player] &fHa sido temporalmente muteado por &7[actor]&f,expira
+      en &7[expires]&f.'
+    error:
+      exists: '&7El jugador &7[player] &6» &fActualmente esta muteado.'
+  tempmuteip:
+    ip:
+      disallowed: '&fHas sido temporalmente muteado por &7[reason] &fBY &7[actor]&f,expira
+        en &7[expires]&f.'
+    notify: '&7[ip] ([players]) &fHa sido muteado temporalmente durante &7[expires]
+      &fBY &7[actor] &fRazon: &7[reason]&f.'
+    error:
+      exists: '&fEsta ip &7[ip] &6» &fActualmente esta muteada.'
+  tempmuteall:
+    notify: '&7[ip] ([players]) &fHa sido muteado temporalmente durante &7[expires]
+      &fBY &7[actor] &fRazon: &7[reason]&f.'
+  unmute:
+    notify: '&fEl jugador &7[player] &fha sido desmuteado por &7[actor]&f.'
+    player: '&fHas sido desmuteado por &7[actor]&f.'
+    error:
+      noExists: '&fEl jugador &7[player] &fno esta muteado.'
+      notOwn: '&fEl jugador &7[player] &fno ha sido muteado por ti,imposible desmutear.'
+  unmuteip:
+    notify: '&fLa IP &7[ip] &fha sido muteada por &7[actor]&f.'
+    error:
+      noExists: '&fLa IP &7[ip] &6» &fActualmente no esta muteada.'
+      notOwn: '&fLa IP &7[ip] &fno ha sido muteado por ti,imposible desmutear.'
+  unmuteall:
+    notify: '&fEl jugador &7[player] &fha sido desmoteado por &7[actor]&f.'
+  banname:
+    name:
+      disallowed: '&fHas sido baneado del servidor por &7[reason]&f.'
+      kick: '&fHas sido baneado permanentemente del servidor por &7[reason]&f.'
+    notify: '&fEl jugador &7[player] &fHa sido baneado por &7[actor] &fRazon: &7[reason]&f.'
+    error:
+      exists: '&fEl jugador &7[name] &6» &fActualmente esta baneado.'
+  tempbanname:
+    name:
+      disallowed: '&fHas sido baneado temporalmente del servidor por &7[reason]&f.
+        \n&fExpira en &7[expires]&f.'
+      kick: '&fHas sido baneado temporalmente del servidor por &7[reason]&f.'
+    notify: '&fEl jugador &7[name] &fha sido temporalmente baneado por &7[actor] &fRazon:
+      &7[reason]&f.'
+  unbanname:
+    notify: '&fEl jugador &7[name] &fha sido perdonado por &7[actor]&f.'
+    error:
+      noExists: '&fEl jugador &7[player] &fno ha sido baneado por ti,imposible perdonar.'
+  banip:
+    ip:
+      disallowed: '&fHas sido ip-baneado del servidor por &7[reason]&f.'
+      kick: '&fHas sido ip-baneado permanentemente del servidor por &7[reason]&f.'
+    notify: '&7[ip] ([players]) &fHa sido permanentemente ip-baneado por &7[actor]
+      &fRazon: &7[reason]&f.'
+    error:
+      exists: '&fEsta IP &7[ip] &6» &fActualmente esta baneada.'
+      cooldown: '&fEsta IP ha sido baneada recientemente,intente mas tarde.'
+  baniprange:
+    error:
+      invalid: '&cInvalid range, please use cidr notation 192.168.0.1/16 or wildcard
+        192.168.*.*'
+      minMax: '&cRange must be lowest to highest'
+      exists: '&cA ban containing those ranges already exists'
+    ip:
+      disallowed: '&6You have been banned from this server for &4[reason]'
+      kick: '&6You have been banned permanently for &4[reason]'
+    notify: '&6[from] - [to] have been banned by [actor]'
+  tempbaniprange:
+    notify: '&6[from] - [to] has been temporarily banned for [expires] by [actor]'
+    ip:
+      disallowed: '&6You have been banned from this server for &4[reason] \n&6It expires
+        in [expires]'
+      kick: '&6You have been temporarily banned for [expires] by [actor] for &4[reason]'
+  unbaniprange:
+    notify: '&6[from] - [to] has been unbanned by [actor]'
+  banipall:
+    notify: '&6[ip] will be permanently banned by [actor] for &4[reason]'
+  tempbanip:
+    ip:
+      disallowed: '&fHas sido temporalmente ip-baneado del servidor por &7[reason]&f.
+        \n&fExpira en &7[expires]&f.'
+      kick: '&fHas sido ip-baneado temporalmente del servidor por &7[reason]&f.'
+    notify: '&7[ip] ([players]) &fHa sido ip-baneado temporalmente durante &7[expires]
+      &fBY &7[actor] &fRazon: &7[reason]&f.'
+  tempbanipall:
+    notify: '&6[ip] will be temporarily banned for [expires] by [actor] for &4[reason]'
+  unbanip:
+    notify: '&fLa IP &7[ip] &fha sido perdonada por &7[actor]&f.'
+    error:
+      noExists: '&fLa IP &7[ip] &6» &fActualmente no esta baneada. '
+  unbanipall:
+    notify: '&6[ip] will be unbanned by [actor]'
+  warn:
+    player:
+      warned: '&fHas sido advertido por &7[actor]&f razon: &7[reason]&f.'
+      disallowed:
+        header: '&fNo podras hablar hasta aceptar tu &3ADVERTENCIA &fmas reciente
+          ,escribe lo siguiente:'
+        reason: '&7[reason]'
+        removed: '&fGracias por enterder,ahora deberias porder hablar.'
+    notify: '&fEl jugador &7[player] &fHa sido advertido por &7[actor]&f razon: &7[reason]&f.'
+    error:
+      cooldown: '&fEl jugador ha sido advertido recientemente,intente mas tarde.'
+  tempwarn:
+    player:
+      warned: '&fHas sido advertido durante &7[expires] &fpor &7[actor]&f razon: &7[reason]&f.'
+    notify: '&fEl jugador &7[player] &fHa sido advertido durante &7[expires] &fpor
+      &7[actor]&f razon: &7[reason]&f.'
+  dwarn:
+    player:
+      notify: '&6Your most recent warning has been deleted by &4[actor]'
+    notify: '&cThe most recent warning for [player] has been deleted'
+    error:
+      noWarnings: '&c[player] has no warnings to delete'
+  bmclear:
+    notify: '&c[player] has had their [type] cleared'
+    error:
+      invalid: '&cInvalid type, please choose between banrecords, muterecords, kicks,
+        notes or warnings'
+  bmutils:
+    missingplayers:
+      notify: '&c[amount] missing players added'
+      noneFound: '&a0 missing players found'
+      found: '&c[amount] missing player data found. Fixing...'
+      error:
+        failedLookup: '&cFailed to lookup player [uuid], check server logs'
+      complete: '&a[amount] players resolved, please restart your server for failed
+        punishments to take affect'
+    duplicates:
+      lookup:
+        notFound: '&aNo duplicate player names found'
+      error:
+        invalidName: '&cInvalid name, must be 16 characters or less and contain only
+          letters, numbers and an underscore'
+        nameExists: '&cA player with that name already exists'
+      success: '&aPlayer name set to [player] successfully'
+  bmrollback:
+    notify: '&c[player] has had their [type] actions undone'
+    error:
+      invalid: '&cInvalid type, please choose between bans, banrecords, mutes, muterecords,
+        kicks, notes or warnings'
+  sync:
+    player:
+      started: '&aStarting force [type] synchronisation'
+      finished: '&aForced [type] synchronisation complete'
+  update:
+    notify: '&6[BanManager] &aAn update is available'
+  notes:
+    header: '&7[player] &ftienes las siguientes notas:'
+    joinAmount: '&7[player] &ftiene &7[amount] &fnotas, click para verlas.'
+    note: '&d[&7[player]&d] &7[message] &f- &7[created]&f.'
+    playerNote: '&d[&7[player]&d] &d[&7[actor]&d] &7[message] &f- &7[created]&f.'
+    dateTimeFormat: dd-MM-yyyy
+    notify: '&fEl jugador &7[player] &fha recibido una nueva nota por &7[actor]&f:
+      &7[message]&f.'
+    error:
+      noNotes: '&7[player] &fno tiene notas.'
+      noOnlineNotes: '&fNo hay jugadores online con notas.'
+  report:
+    notify: '&6[player] has been reported by [actor] for &4[reason]'
+    error:
+      cooldown: '&cThis player was reported too recently, try again later'
+    assign:
+      player: '&aReport [id] assigned to [player]'
+      notify: '&aYou have been assigned report [id] by [actor]'
+    unassign:
+      player: '&aReport [id] unassigned'
+    close:
+      notify:
+        closed: '&aReport [id] closed by [actor]'
+        command: '&aReport [id] closed by [actor] with [command]'
+        comment: '&aReport [id] closed by [actor] with [comment]'
+      dispatch: Executing command [command]
+    list:
+      noResults: '&cNo reports found'
+      error:
+        invalidState: '&cReport state [state] not found'
+      row:
+        dateTimeFormat: yyyy-MM-dd HH:mm:ss
+        header: '&e-- Reports ([count]) -- Page ([page]/[maxPage])'
+        all: '&7#[id] &e[[state]] &6- [created] - [player]'
+    tp:
+      error:
+        notFound: '&cReport not found'
+        worldNotFound: '&cWorld [world] could not be found'
+        invalidId: '&c[id] is not a valid report id'
+      dateTimeFormat: yyyy-MM-dd HH:mm:ss
+      notify:
+        report: '&7#[id] &6[actor] reported [player] for &4[reason]&6 at [created]'
+        location: '[world] - [x], [y], [z]'
+    info:
+      error:
+        notFound: '&cReport not found'
+        invalidId: '&c[id] is not a valid report id'
+      dateTimeFormat: yyyy-MM-dd HH:mm:ss
+      notify:
+        report: '&7#[id] &6[actor] reported [player] for &4[reason]&6 at [created]'
+        location: '[world] - [x], [y], [z]'
+  addnoteall:
+    notify: '&c[player] will have a new attached by [actor]: [message]'
+  banlist:
+    header: '&fHay &7[bans] [type] &fbaneados:'
+  bmactivity:
+    row:
+      all: '&a[&f[type]&a] &6[player]&f - &6[actor]&f - &e[created]'
+      player: '&a[&f[type]&a] &6[player]&f - &e[created]'
+      dateTimeFormat: dd-MM-yyyy HH:mm:ss
+    noResults: '&cNo results found'
+  bmdelete:
+    notify: '&a[rows] rows deleted'
+    error:
+      invalid: '&cInvalid type, please choose between banrecords, muterecords, kicks,
+        notes or warnings'
+      invalidId: '&c[id] is not a valid number'
+  denyalts:
+    player:
+      disallowed: '&cThe IP address you are joining from is linked to a banned player'
+  reasons:
+    row: '[hashtag] = [reason]'
