@@ -3,8 +3,8 @@
 # Single quotes have to be doubled: ''
 # by:
 action=\u00A75* {0} \u00A75{1}
-addedToAccount=\u00A7a{0} han sido agregados a tu cuenta.
-addedToOthersAccount=\u00A7a{0} han sidos agregados a la cuenta de {1}\u00A7a. Nuevo saldo\: {2}
+addedToAccount=\u00A77{0} \u00A7fhan sido agregados a tu cuenta.
+addedToOthersAccount=\u00A77{0} \u00A7han sidos agregados a la cuenta de \u00A77{1}\u00A7. Nuevo saldo\: \u00A77{2}
 adventure=aventura
 alertBroke=roto\:
 alertFormat=\u00A73[{0}] \u00A7f {1} \u00A76 {2} en\: {3}
@@ -145,7 +145,7 @@ geoipCantFind=\u00A7c{0} \u00A76viene de \u00A7aun pa\u00EDs desconocido\u00A76.
 geoIpUrlEmpty=El link para descargar GeoIP esta vacio.
 geoIpUrlInvalid=El link para descargar GeoIP es inv\u00E1lido.
 givenSkull=\u00A76Se te ha dado el cr\u00E1neo de \u00A7c{0}\u00A76.
-giveSpawn=\u00A76Entregado\u00A7c {0} \u00A76de\u00A7c {1} \u00A76a\u00A7c {2}\u00A76.
+giveSpawn=Entregado\u00A77 {0} \u00A7fde\u00A77 {1} \u00A7fa\u00A77 {2}\u00A7f.
 giveSpawnFailure=\u00A74Sin espacio, \u00A7c{0} {1} \u00A74se perdieron.
 godDisabledFor=\u00A7cdeshabilitado\u00A76 para\u00A7c {0}
 godEnabledFor=\u00A7aactivado\u00A76 para\u00A7c {0}
@@ -200,7 +200,8 @@ invalidWarpName=\u00A74\u00A1Nombre del Warp no reconocido\!
 invalidWorld=\u00A74Mundo erroneo o no cargado.
 inventoryClearFail=\u00A74El jugador {0} \u00A74no tiene\u00A7c {1} \u00A74de\u00A7c {2}\u00A74.
 inventoryClearingAllArmor=\u00A7eLimpiado objetos y armaduras de\u00A7a {0}\u00A7e.
-inventoryClearingAllItems=Se ha limpiado el inventario de\u00A77{0}\u00A7f.
+inventoryClearingAllItems=Se ha limpiado el inventario de                            
+ \u00A77{0}\u00A7f.
 inventoryClearingFromAll=\u00A77Limpiando el inventario de todos los usuarios...
 inventoryClearingStack=\u00A76Eliminado\u00A7c {0} \u00A76de\u00A7c {1} \u00A76de {2}\u00A76.
 is=es
@@ -362,7 +363,7 @@ onlyDayNight=\u00A76/time \u00A74\u00FAnicamente funciona con los valores \u00A7
 onlyPlayers=\u00A74Solo jugadores dentro del juego pueden usar \u00A7c{0}\u00A74.
 onlyPlayerSkulls=\u00A74Solo puedes indicar el propietario de las calaveras de jugadores (\u00A7c397\:3\u00A74).
 onlySunStorm=\u00A7c/weather \u00A74solo acepta los valores \u00A7csun \u00A74o \u00A7cstorm \u00A74(\u00A76sol\u00A74/\u00A76tormenta\u00A74).
-openingDisposal=\u00A76Opening disposal menu...
+openingDisposal=Abriendo el basurero...
 orderBalances=Creando un ranking de {0} usuarios segun su saldo, espera...
 oversizedTempban=\u00A74No puedes banear por ese periodo de tiempo.
 payConfirmToggleOff=\u00A76You will no longer be prompted to confirm payments.
