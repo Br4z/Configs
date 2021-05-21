@@ -13,8 +13,9 @@
   -____/   /'    \_/  
                                                        
                       
-```                    
-   ![](https://i.imgur.com/0mHVoje.png?1)
+```   
+# Discord
+[![](https://i.imgur.com/0mHVoje.png?1)](https://bit.ly/2KQXYno)
 
 # Objetivo
 
