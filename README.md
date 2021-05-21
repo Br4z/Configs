@@ -29,7 +29,7 @@
 
 -
 
-> Creador: BrAZ
+> Creador: BrAz
 
 `Editores`
 
