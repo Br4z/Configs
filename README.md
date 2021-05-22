@@ -19,7 +19,7 @@
 
 # Objetivo
 
-- Llevar de una forma muy documentada la configuracion de skripts  y plugin
+- Llevar de una forma muy documentada la configuracion de skripts  y plugins
 - Dar a conocer el progreso del servidor
 
 `PLugins`
