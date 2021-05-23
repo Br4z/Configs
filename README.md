@@ -17,6 +17,9 @@
 # Discord
 [![](https://i.imgur.com/0mHVoje.png?1)](https://bit.ly/2KQXYno)
 
+# Resumen
+G59 server (o actual MaxwellCraft) es un servidor dedicado exclusivamente a la modalidad survival medio-op con tematicas variadas y actividad altamente activa.
+
 # Objetivo
 
 - Llevar de una forma muy documentada la configuracion de skripts  y plugins
@@ -30,6 +33,10 @@
 
 -
 
+# Contacto O Aportes
+
+> "*Este proyecto fui iniciado con el fin de estar abierto a la comunidad y asi estar activamente conectado con las sugerencias de las personas, por lo que cualquier sugerencia es agradecida (para ello puedes abrir pull request), como incentivo se te daran reconocimientos en el servidor y en el proyecto*"
+
 > Creador: BrAz
 
 `Editores`
@@ -39,6 +46,10 @@
 `Supervisores`
 
 >None
+
+`Agradecimientos`
+
+>none (pero eso puede cambiar)
 
 `Social Media`
 
