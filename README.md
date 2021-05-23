@@ -35,7 +35,7 @@ G59 server (o actual MaxwellCraft) es un servidor dedicado exclusivamente a la m
 
 # Contacto O Aportes
 
-> "*Este proyecto fui iniciado con el fin de estar abierto a la comunidad y asi estar activamente conectado con las sugerencias de las personas, por lo que cualquier sugerencia es agradecida (para ello puedes abrir pull request), como incentivo se te daran reconocimientos en el servidor y en el proyecto*"
+> "*Este proyecto fui iniciado con el fin de estar abierto a la comunidad y asi estar activamente conectado con las sugerencias de la misma, por lo que cualquier sugerencia es agradecida (para ello puedes abrir pull request), como incentivo se te daran reconocimientos en el servidor y en el proyecto*"
 
 > Creador: BrAz
 
