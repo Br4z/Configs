@@ -14,6 +14,8 @@
                                                        
                       
 ```   
+___
+
 # Discord
 [![](https://i.imgur.com/0mHVoje.png?1)](https://bit.ly/2KQXYno)
 
@@ -57,4 +59,4 @@ G59 server (o actual MaxwellCraft) es un servidor dedicado exclusivamente a la m
 ![Twitter Follow](https://img.shields.io/twitter/follow/Braz___?style=for-the-badge)
 ![YouTube Channel Subscribers](https://img.shields.io/youtube/channel/subscribers/UC8n6Jw2hVcL_nLn8eWsm8Eg?style=for-the-badge)
 ![Twitch Status](https://img.shields.io/twitch/status/Braz___?style=for-the-badge)
-
+___
