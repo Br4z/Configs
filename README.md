@@ -17,7 +17,7 @@
 ___
 
 # Discord
-[![](https://i.imgur.com/0mHVoje.png?1)](https://bit.ly/2KQXYno)
+[![](https://i.imgur.com/0mHVoje.png?1)](https://bit.ly/2KQXYno "Dale click para irte al disneyland de los degenerados o programadores (es lo mismo, no?)")
 
 # Resumen
 G59 server (o actual MaxwellCraft) es un servidor dedicado exclusivamente a la modalidad survival medio-op con tematicas variadas y actividad altamente activa.
